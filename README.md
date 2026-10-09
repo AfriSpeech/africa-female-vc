@@ -9,7 +9,17 @@ Built on [Seed-VC](https://github.com/Plachtaa/seed-vc), fine-tuned on
 
 It is **not limited to those 21 languages**: voice conversion is audio-to-audio, so the words come from the
 input speech and the voice from a reference clip - there is no text or language input to restrict it. The
-21 training languages are where quality has been measured; other languages work too.
+21 training languages are the fine-tuning data; tested on **37 languages it never saw**, it still
+beats zero-shot Seed-VC in 27 of them:
+
+| | Languages | Floor (real audio) | Zero-shot Seed-VC | **africa-female-vc** | Fine-tuned better in |
+|---|---:|---:|---:|---:|---:|
+| **Out-of-domain** (never trained on) | 37 | 20.85 | 34.96 (+14.1) | **30.98 (+10.1)** | 27/37 |
+| **Control** (training languages, new source) | 4 | 16.27 | 31.73 (+15.5) | **25.37 (+9.1)** | 3/4 |
+
+(Character error rate after conversion, lower is better; brackets show points above the real-audio floor.
+Details and per-language results on the
+[model card](https://huggingface.co/AfriSpeech/africa-female-vc#out-of-domain-languages).)
 
 - **Model:** [AfriSpeech/africa-female-vc](https://huggingface.co/AfriSpeech/africa-female-vc)
 - **Try it:** [AfriSpeech/africa-female-vc-demo](https://huggingface.co/spaces/AfriSpeech/africa-female-vc-demo)
