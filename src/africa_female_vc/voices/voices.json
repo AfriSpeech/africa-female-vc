@@ -1,0 +1,212 @@
+{
+ "amharic": {
+  "language": "Amharic",
+  "config": "amharic_amh",
+  "file": "amharic.wav",
+  "source_id": "amharic_amh_01_01183",
+  "utmos": 3.776,
+  "duration": 8.3,
+  "transcript": "እውነትን ስማርትን ቅን ከሆኑ ከልብ ከሚወዱኝና ደስ ከሚሉ ሰዎች ጋር ተገናኘሁ ከዚያ እኔ የምመለወጥ ጀመርኩ",
+  "candidate": 1
+ },
+ "chichewa": {
+  "language": "Chichewa",
+  "config": "chichewa_nya",
+  "file": "chichewa.wav",
+  "source_id": "chichewa_nya_02_00374",
+  "utmos": 4.097,
+  "duration": 9.3,
+  "transcript": "ndinali ndi nkhawa kwambiri koma mamuna wanga sankada nazo nkhawa kwambiri ngati ine iye ananditsimikizira komanso undiuza kuti ndiyenera kudalira yehova",
+  "candidate": 2
+ },
+ "hausa": {
+  "language": "Hausa",
+  "config": "hausa_hau",
+  "file": "hausa.wav",
+  "source_id": "hausa_hau_01_01857",
+  "utmos": 4.239,
+  "duration": 13.8,
+  "transcript": "ni ma misali mai kyau da iyayena suka kafa ne ya taimaka min mahaifiya ta tayi baptist matan ina karama bayan yan shekaru mahaifina ma yayi baftisma kuma tun daga lokacin bama wasa da dangantakar mu da jahoba",
+  "candidate": 2
+ },
+ "igbo": {
+  "language": "Igbo",
+  "config": "igbo_ibo",
+  "file": "igbo.wav",
+  "source_id": "igbo_ibo_01_00381",
+  "utmos": 4.126,
+  "duration": 9.3,
+  "transcript": "1 ihe kwuru na baịbụl ogologo oge gara aga ga-enyere anyị aka ọ sịrị na-emesokwanu ndi mmadu otunu choro ka ha na-emeso ọnụ",
+  "candidate": 1
+ },
+ "kinyarwanda": {
+  "language": "Kinyarwanda",
+  "config": "kinyarwanda_kin",
+  "file": "kinyarwanda.wav",
+  "source_id": "kinyarwanda_kin_00_00739",
+  "utmos": 4.108,
+  "duration": 8.8,
+  "transcript": "kandi na we akabasha kumbona neza ubwo rero twabonye ahantu nazajya mpagarara maze denise ambwira igihe gikwiriye najya amazira",
+  "candidate": 2
+ },
+ "ndebele": {
+  "language": "Ndebele",
+  "config": "ndebele_south_nde",
+  "file": "ndebele.wav",
+  "source_id": "ndebele_south_nde_02_00873",
+  "utmos": 4.043,
+  "duration": 8.1,
+  "transcript": "wakhuthaza woke umuntu kanye nathi esasanda kutjhatha mina lomkami sacabanga ngakho sasesibhalela egatsheni",
+  "candidate": 2
+ },
+ "oromo": {
+  "language": "Oromo",
+  "config": "oromo_orm",
+  "file": "oromo.wav",
+  "source_id": "oromo_orm_02_02020",
+  "utmos": 3.844,
+  "duration": 8.2,
+  "transcript": "gaaffilee achirra jiran umurii isaa guutuu gaafachaa akka ture nutti hime kanaafuu maayikii wajjin deebinee isaas ofsiisuuf beellama qaban",
+  "candidate": 3
+ },
+ "kirundi": {
+  "language": "Kirundi",
+  "config": "rundi_run",
+  "file": "kirundi.wav",
+  "source_id": "rundi_run_01_00632",
+  "utmos": 4.075,
+  "duration": 9.2,
+  "transcript": "kuko imyaka yagiye irahera jewe numukobwa wanje twagiye turakoreshwa",
+  "candidate": 3
+ },
+ "sepedi": {
+  "language": "Sepedi",
+  "config": "sepedi_nso",
+  "file": "sepedi.wav",
+  "source_id": "sepedi_nso_01_02328",
+  "utmos": 3.93,
+  "duration": 8.3,
+  "transcript": "go be go bolawa batho ba bantshi mo nageng so batswadi ba ka le butiaka le bona ba ile ba bolawa",
+  "candidate": 1
+ },
+ "sesotho": {
+  "language": "Sesotho",
+  "config": "sesotho_sot",
+  "file": "sesotho.wav",
+  "source_id": "sesotho_sot_00_00315",
+  "utmos": 3.894,
+  "duration": 9.0,
+  "transcript": "ka dinako tse ding ke ne ke sa bone le monyako o notletsoeng ke ne ke iponela sepakapaka fela ke sa bone dibatla tseo",
+  "candidate": 3
+ },
+ "shona": {
+  "language": "Shona",
+  "config": "shona_sna",
+  "file": "shona.wav",
+  "source_id": "shona_sna_01_02084",
+  "utmos": 4.227,
+  "duration": 10.3,
+  "transcript": "ehe kakabuda video yekutanga yeve chidiki vanobvunza kuti inonzi how can i make real friends vakandikoka tikariona tese",
+  "candidate": 3
+ },
+ "swahili": {
+  "language": "Swahili",
+  "config": "swahili_swa",
+  "file": "swahili.wav",
+  "source_id": "swahili_swa_01_00150",
+  "utmos": 4.278,
+  "duration": 8.8,
+  "transcript": "na ninaposubiri hasubiri tu bila kufanya chochote yehova anafanya kazi kwa bidii siku zote ana mambo ya kufanya",
+  "candidate": 1
+ },
+ "swati": {
+  "language": "Swati",
+  "config": "swati_ssw",
+  "file": "swati.wav",
+  "source_id": "swati_ssw_00_00030",
+  "utmos": 3.986,
+  "duration": 9.2,
+  "transcript": "ngathi ku jobe wathi kuphi ngathi ku jobe laphinde latsi kuphi ummeli wami wathi ngujobe",
+  "candidate": 3
+ },
+ "tigrinya": {
+  "language": "Tigrinya",
+  "config": "tigrinya_tir",
+  "file": "tigrinya.wav",
+  "source_id": "tigrinya_tir_00_00024",
+  "utmos": 3.365,
+  "duration": 9.5,
+  "transcript": "ንመርመራ ክንከይድ ከለና ነቶም መርመርትና ብጠባይናን ብዘረባናን ብለው ትናን ኣቢልና ጥሩፋት ከምዘይኮና ከነርእዮም ንጽዕር ኔርና",
+  "candidate": 3
+ },
+ "tsonga": {
+  "language": "Tsonga",
+  "config": "tsonga_tso",
+  "file": "tsonga.wav",
+  "source_id": "tsonga_tso_01_00918",
+  "utmos": 4.023,
+  "duration": 8.4,
+  "transcript": "ivi ni tlile ka link yo sungula nie mahala unga dyondza bibele mahala",
+  "candidate": 2
+ },
+ "setswana": {
+  "language": "Setswana",
+  "config": "tswana_tsn",
+  "file": "setswana.wav",
+  "source_id": "tswana_tsn_02_00234",
+  "utmos": 3.835,
+  "duration": 10.0,
+  "transcript": "bodiredi bo ne bo nthusa ka gonne ke ne ke bua le batho ba tsholofelo e e kgatlhang e re nang le yone fa ke ntse ke thusa ba bangwe le nna tumelo yame e ne e nonofa",
+  "candidate": 2
+ },
+ "twi": {
+  "language": "Twi",
+  "config": "twi_twi",
+  "file": "twi.wav",
+  "source_id": "twi_twi_03_01373",
+  "utmos": 4.356,
+  "duration": 11.3,
+  "transcript": "ɛhɔ ka sɛ na ateasefoɔ nim sɛ ɔbɛwuwu awufoɔ deɛ wɔnnim biribiara na wɔnni akatua biara bio ɛfiri sɛ nnipa nkae wɔn bio",
+  "candidate": 1
+ },
+ "venda": {
+  "language": "Venda",
+  "config": "venda_ven",
+  "file": "venda.wav",
+  "source_id": "venda_ven_02_00277",
+  "utmos": 4.213,
+  "duration": 11.4,
+  "transcript": "ndo aluswa nga mme a nga mahayani musi ndi sha mutuku mmeya nga vho ngudisa u vhala na u nwala vho vha tshi shumisa khandiso fhambanaho",
+  "candidate": 1
+ },
+ "xhosa": {
+  "language": "Xhosa",
+  "config": "xhosa_xho",
+  "file": "xhosa.wav",
+  "source_id": "xhosa_xho_00_00034",
+  "utmos": 4.249,
+  "duration": 13.5,
+  "transcript": "ndasuka ndathi ebhayibhileni yathi yona kakade isebhayibhileni kodwa ndawoni ndathi kuyobhi yathi p ndathi kuyobhi yaphinda yabuza",
+  "candidate": 1
+ },
+ "yoruba": {
+  "language": "Yoruba",
+  "config": "yoruba_yor",
+  "file": "yoruba.wav",
+  "source_id": "yoruba_yor_01_01971",
+  "utmos": 4.226,
+  "duration": 9.7,
+  "transcript": "ka ni mii kii ṣe iyawo ọkan lara awọn igbimọ ẹka ni o ṣeeṣe kin ma mu ba awọn arakunrin yen se gbaraleji ofa to fun itọsọna e",
+  "candidate": 3
+ },
+ "zulu": {
+  "language": "Zulu",
+  "config": "zulu_zul",
+  "file": "zulu.wav",
+  "source_id": "zulu_zul_02_01512",
+  "utmos": 4.126,
+  "duration": 8.9,
+  "transcript": "yazi ngikhumbulani ngesikhathi ngiwumemezelo ongabhapathiziwe sesishumayela ndawonye sesisanda kuyiqala nje insimu ngalelo langa",
+  "candidate": 2
+ }
+}

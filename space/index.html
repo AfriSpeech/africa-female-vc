@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Africa Female VC</title>
+<style>
+  :root {
+    --bg: #faf8f5; --card: #ffffff; --ink: #1d1b19; --muted: #6b645c; --line: #e6e0d8;
+    --accent: #b5522b; --accent-ink: #ffffff; --ok: #2f7a45; --warn-bg: #fff4e0; --warn-ink: #7a4a00; --sel: #fbeee7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #161412; --card: #201d1a; --ink: #f1ece6; --muted: #a8a097; --line: #36312c;
+      --accent: #e07a4f; --accent-ink: #1a0f08; --ok: #6cc28a; --warn-bg: #3a2c12; --warn-ink: #f3cf8f; --sel: #3a261c;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #161412; --card: #201d1a; --ink: #f1ece6; --muted: #a8a097; --line: #36312c;
+    --accent: #e07a4f; --accent-ink: #1a0f08; --ok: #6cc28a; --warn-bg: #3a2c12; --warn-ink: #f3cf8f; --sel: #3a261c;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 900px; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { font-size: 1.7rem; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); margin: 0 0 20px; }
+  .sub a { color: var(--accent); }
+  .status { border-radius: 10px; padding: 12px 14px; margin-bottom: 20px; font-size: .95rem; display: flex; gap: 10px; align-items: flex-start; }
+  .status.warm { background: var(--warn-bg); color: var(--warn-ink); }
+  .status.ready { background: transparent; color: var(--ok); border: 1px solid var(--line); }
+  .status.err { background: var(--warn-bg); color: var(--warn-ink); }
+  .dot { width: 10px; height: 10px; border-radius: 50%; background: currentColor; margin-top: 7px; flex: none; }
+  .warm .dot { animation: pulse 1.2s infinite; }
+  @keyframes pulse { 50% { opacity: .25; } }
+  section { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px; margin-bottom: 16px; }
+  h2 { font-size: 1.05rem; margin: 0 0 12px; }
+  .step { color: var(--accent); font-weight: 700; margin-right: 6px; }
+  .voices { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+  .voice { border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; display: flex; align-items: center; justify-content: space-between; gap: 6px; cursor: pointer; background: var(--card); color: var(--ink); font: inherit; text-align: left; }
+  .voice.sel { border-color: var(--accent); background: var(--sel); }
+  .voice .name { font-weight: 600; }
+  .play { border: 0; background: none; color: var(--accent); cursor: pointer; font-size: 1rem; padding: 2px 4px; }
+  .row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  button.primary, button.ghost, label.ghost { border-radius: 10px; padding: 10px 16px; font: inherit; font-weight: 600; cursor: pointer; }
+  button.primary { background: var(--accent); color: var(--accent-ink); border: 0; }
+  button.primary:disabled { opacity: .5; cursor: not-allowed; }
+  button.ghost, label.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+  input[type=file] { display: none; }
+  audio { width: 100%; margin-top: 10px; }
+  .hint { color: var(--muted); font-size: .88rem; margin: 8px 0 0; }
+  select { font: inherit; padding: 8px; border-radius: 8px; border: 1px solid var(--line); background: var(--card); color: var(--ink); }
+  a.dl { color: var(--accent); font-weight: 600; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Africa Female VC</h1>
+  <p class="sub">Convert any speech into one of 21 African female voices. Seed-VC fine-tuned on
+    <a href="https://huggingface.co/datasets/AfriSpeech/africa-female-speech-v2-best60" target="_blank" rel="noopener">AfriSpeech/africa-female-speech-v2-best60</a>.
+    Model: <a href="https://huggingface.co/AfriSpeech/africa-female-vc" target="_blank" rel="noopener">AfriSpeech/africa-female-vc</a> ·
+    Code: <a href="https://github.com/AfriSpeech/africa-female-vc" target="_blank" rel="noopener">GitHub</a></p>
+
+  <div id="status" class="status warm" role="status" aria-live="polite"><span class="dot"></span><span id="statusText">Connecting to the conversion server…</span></div>
+
+  <section>
+    <h2><span class="step">1</span>Pick a voice</h2>
+    <div id="voices" class="voices"></div>
+    <p class="hint">Press ▶ to preview a voice. Each is a real speaker of that language.</p>
+  </section>
+
+  <section>
+    <h2><span class="step">2</span>Your audio</h2>
+    <div class="row">
+      <button id="recBtn" class="ghost" type="button">● Record</button>
+      <label class="ghost" for="fileIn">Upload a file</label>
+      <input id="fileIn" type="file" accept="audio/*">
+    </div>
+    <audio id="srcAudio" controls hidden></audio>
+    <p class="hint">Up to 30 seconds. Any language works: the words are kept, only the voice changes.</p>
+  </section>
+
+  <section>
+    <h2><span class="step">3</span>Convert</h2>
+    <div class="row">
+      <button id="convertBtn" class="primary" type="button" disabled>Convert</button>
+      <select id="quality" aria-label="Quality">
+        <option value="50" selected>Best quality</option>
+        <option value="25">Faster</option>
+      </select>
+    </div>
+    <audio id="outAudio" controls hidden></audio>
+    <p id="dlRow" class="hint" hidden><a id="dlLink" class="dl" download="converted.wav">Download converted audio</a></p>
+  </section>
+</main>
+
+<script>
+// Set after `modal deploy deploy/modal_app.py`
+const API = "https://michsethowusuwfp--africa-female-vc-converter-api.modal.run";
+
+const statusEl = document.getElementById("status");
+const statusText = document.getElementById("statusText");
+let serverReady = false;
+let srcBlob = null;
+let voice = "twi";
+
+function setStatus(kind, text) {
+  statusEl.className = "status " + kind;
+  statusText.textContent = text;
+}
+
+// The GPU server scales to zero when idle. The first request after a quiet
+// spell boots a container (cold start), which takes much longer than a
+// conversion itself - say so, so users don't think the model is just slow.
+async function wakeServer() {
+  const t0 = Date.now();
+  let warmShown = false;
+  const timer = setInterval(() => {
+    const s = Math.round((Date.now() - t0) / 1000);
+    if (s >= 3) {
+      warmShown = true;
+      setStatus("warm", `The GPU server is waking up (cold start after being idle) - ${s}s so far. This usually takes 1-2 minutes, only for the first request; conversions are quick once it's up.`);
+    }
+  }, 1000);
+  try {
+    const r = await fetch(API + "/health", { cache: "no-store" });
+    if (!r.ok) throw new Error(r.status);
+    serverReady = true;
+    setStatus("ready", warmShown ? "Server is awake and ready." : "Server ready.");
+  } catch (e) {
+    setStatus("err", "Could not reach the conversion server. Please refresh to try again.");
+  } finally {
+    clearInterval(timer);
+    updateConvert();
+  }
+}
+
+async function loadVoices() {
+  const voices = await (await fetch("voices/voices.json")).json();
+  const grid = document.getElementById("voices");
+  const preview = new Audio();
+  Object.entries(voices).sort((a, b) => a[1].language.localeCompare(b[1].language)).forEach(([id, meta]) => {
+    const card = document.createElement("div");
+    card.className = "voice" + (id === voice ? " sel" : "");
+    card.setAttribute("role", "button");
+    card.tabIndex = 0;
+    card.innerHTML = `<span class="name">${meta.language}</span>`;
+    const play = document.createElement("button");
+    play.className = "play";
+    play.type = "button";
+    play.title = "Preview " + meta.language;
+    play.textContent = "▶";
+    play.onclick = (ev) => { ev.stopPropagation(); preview.src = "voices/" + meta.file; preview.play(); };
+    card.appendChild(play);
+    const pick = () => {
+      voice = id;
+      grid.querySelectorAll(".voice").forEach((c) => c.classList.remove("sel"));
+      card.classList.add("sel");
+    };
+    card.onclick = pick;
+    card.onkeydown = (ev) => { if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); pick(); } };
+    grid.appendChild(card);
+  });
+}
+
+function setSource(blob) {
+  srcBlob = blob;
+  const a = document.getElementById("srcAudio");
+  a.src = URL.createObjectURL(blob);
+  a.hidden = false;
+  updateConvert();
+}
+
+function updateConvert() {
+  document.getElementById("convertBtn").disabled = !srcBlob;
+}
+
+document.getElementById("fileIn").onchange = (e) => {
+  if (e.target.files[0]) setSource(e.target.files[0]);
+};
+
+let recorder = null;
+document.getElementById("recBtn").onclick = async (e) => {
+  const btn = e.currentTarget;
+  if (recorder && recorder.state === "recording") {
+    recorder.stop();
+    return;
+  }
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    const chunks = [];
+    recorder = new MediaRecorder(stream);
+    recorder.ondataavailable = (ev) => chunks.push(ev.data);
+    recorder.onstop = () => {
+      stream.getTracks().forEach((t) => t.stop());
+      btn.textContent = "● Record";
+      setSource(new Blob(chunks, { type: recorder.mimeType }));
+    };
+    recorder.start();
+    btn.textContent = "■ Stop";
+    setTimeout(() => recorder.state === "recording" && recorder.stop(), 30000);
+  } catch (err) {
+    setStatus("err", "Microphone not available - you can upload a file instead.");
+  }
+};
+
+document.getElementById("convertBtn").onclick = async () => {
+  const btn = document.getElementById("convertBtn");
+  btn.disabled = true;
+  const t0 = Date.now();
+  const timer = setInterval(() => {
+    const s = Math.round((Date.now() - t0) / 1000);
+    setStatus("warm", serverReady
+      ? `Converting… ${s}s`
+      : `The GPU server is waking up (cold start) before converting - ${s}s so far. The first request can take 1-2 minutes.`);
+  }, 1000);
+  try {
+    const fd = new FormData();
+    fd.append("file", srcBlob, "input");
+    fd.append("voice", voice);
+    fd.append("diffusion_steps", document.getElementById("quality").value);
+    const r = await fetch(API + "/convert", { method: "POST", body: fd });
+    if (!r.ok) {
+      let msg = r.status;
+      try { msg = (await r.json()).detail || msg; } catch (_) {}
+      throw new Error(msg);
+    }
+    const out = await r.blob();
+    const url = URL.createObjectURL(out);
+    const a = document.getElementById("outAudio");
+    a.src = url;
+    a.hidden = false;
+    document.getElementById("dlLink").href = url;
+    document.getElementById("dlRow").hidden = false;
+    serverReady = true;
+    setStatus("ready", `Done in ${Math.round((Date.now() - t0) / 1000)}s.`);
+  } catch (err) {
+    setStatus("err", "Conversion failed: " + err.message);
+  } finally {
+    clearInterval(timer);
+    btn.disabled = false;
+  }
+};
+
+loadVoices();
+wakeServer();
+</script>
+</body>
+</html>

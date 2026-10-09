@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "africa-female-vc"
+version = "0.1.0"
+description = "Voice conversion into African female voices - 21 languages, built on Seed-VC"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "GPL-3.0-or-later" }
+authors = [{ name = "AfriSpeech" }]
+keywords = ["voice-conversion", "african-languages", "speech", "seed-vc", "swahili", "yoruba", "twi", "zulu"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+    "Intended Audience :: Science/Research",
+]
+
+# torch / torchaudio / librosa are deliberately NOT pinned here: Seed-VC's own
+# requirements.txt installs them on first use. Declaring our own versions
+# installs a second torch build and breaks torchaudio's CUDA runtime.
+# numpy and huggingface_hub follow Seed-VC's pins (numpy 1.26.x; the older Hub
+# API that its BigVGAN loader calls).
+dependencies = [
+    "huggingface_hub>=0.28.1,<0.34",
+    "soundfile>=0.12",
+    "numpy>=1.26,<2",
+    "pyyaml",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "ruff>=0.4"]
+
+[project.scripts]
+africa-female-vc = "africa_female_vc.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/AfriSpeech/africa-female-vc"
+Model = "https://huggingface.co/AfriSpeech/africa-female-vc"
+Demo = "https://huggingface.co/spaces/AfriSpeech/africa-female-vc-demo"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+africa_female_vc = ["voices/*.wav", "voices/voices.json"]
+
+[tool.ruff]
+line-length = 130
+target-version = "py310"
