@@ -1,16 +1,10 @@
 # africa-female-vc
 
-Voice conversion into **21 African female voices**. Give it speech in any language - a file,
-a folder, a recording - pick a voice, and get the same words spoken in that voice.
+Convert African speech to 21 female voices.
 
 Built on [Seed-VC](https://github.com/Plachtaa/seed-vc), fine-tuned on
 [AfriSpeech/africa-female-speech-v2-best60](https://huggingface.co/datasets/AfriSpeech/africa-female-speech-v2-best60)
 (the cleanest hour of each language: Demucs-cleaned, UTMOS-ranked).
-
-It is **not limited to those 21 languages**: voice conversion is audio-to-audio, so the words come from the
-input speech and the voice from a reference clip - there is no text or language input to restrict it. The
-21 training languages are the fine-tuning data; tested on **37 languages it never saw**, it still
-beats zero-shot Seed-VC in 27 of them:
 
 | | Languages | Floor (real audio) | Zero-shot Seed-VC | **africa-female-vc** | Fine-tuned better in |
 |---|---:|---:|---:|---:|---:|
