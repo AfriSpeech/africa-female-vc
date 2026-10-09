@@ -58,7 +58,7 @@ class Converter:
         from fastapi.middleware.cors import CORSMiddleware
         from fastapi.responses import Response
 
-        from africa_female_vc.voices import list_voices
+        from africa_female_vc.voices import list_voices, resolve_voice
 
         web = FastAPI(title="africa-female-vc")
         web.add_middleware(
@@ -75,11 +75,14 @@ class Converter:
 
         @web.get("/voices")
         def voices():
-            return {vid: {k: m[k] for k in ("language", "duration", "utmos")} for vid, m in list_voices().items()}
+            return {vid: {k: m[k] for k in ("description", "recorded_in", "pitch_hz", "duration", "utmos")}
+                    for vid, m in list_voices().items()}
 
         @web.post("/convert")
-        async def convert(file: UploadFile = File(...), voice: str = Form("twi"), diffusion_steps: int = Form(50)):
-            if voice not in list_voices():
+        async def convert(file: UploadFile = File(...), voice: str = Form("clear-high-slow"), diffusion_steps: int = Form(50)):
+            try:
+                voice = resolve_voice(voice)  # ids, or aliases such as the language a voice was recorded in
+            except KeyError:
                 raise HTTPException(400, f"unknown voice {voice!r}")
             if diffusion_steps not in (25, 50):
                 raise HTTPException(400, "diffusion_steps must be 25 or 50")

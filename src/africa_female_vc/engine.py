@@ -62,12 +62,14 @@ def ensure_seedvc(install_deps: bool = True) -> Path:
 
 
 class VoiceConverter:
-    """Convert speech into one of the built-in African voices, or any reference clip.
+    """Convert speech into one of the built-in voices, or any reference clip.
+
+    Voices are independent of the input language: any voice can be used for speech in any language.
 
     Parameters
     ----------
     voice:
-        Default built-in voice (``twi``, ``swahili``, ... see ``list_voices()``).
+        Default built-in voice (``clear-high-slow``, ``warm-low``, ... see ``list_voices()``).
     diffusion_steps:
         50 recommended; 25 is faster but robotic, 100 slightly smoother.
     """

@@ -1,6 +1,6 @@
 # africa-female-vc
 
-Voice conversion into **21 African female voices**. Give it any speech - a file,
+Voice conversion into **21 African female voices**. Give it speech in any language - a file,
 a folder, a recording - pick a voice, and get the same words spoken in that voice.
 
 Built on [Seed-VC](https://github.com/Plachtaa/seed-vc), fine-tuned on
@@ -12,35 +12,41 @@ Built on [Seed-VC](https://github.com/Plachtaa/seed-vc), fine-tuned on
 
 ## The voices
 
-One speaker per language, shipped with the package in
-[`src/africa_female_vc/voices/`](src/africa_female_vc/voices) - click a name to listen.
+**Voices are not tied to languages.** The model has no language input: it takes your audio (the words) and a
+reference clip (the voice), so any voice can speak converted audio in any language - English into `warm-low`,
+Swahili into `clear-high-slow`, anything into anything.
 
-| Voice (`--voice`) | Language | Preview | Length | UTMOS |
-|---|---|---|---:|---:|
-| `amharic` | Amharic | [amharic.wav](src/africa_female_vc/voices/amharic.wav) | 8.3 s | 3.78 |
-| `chichewa` | Chichewa | [chichewa.wav](src/africa_female_vc/voices/chichewa.wav) | 9.3 s | 4.10 |
-| `hausa` | Hausa | [hausa.wav](src/africa_female_vc/voices/hausa.wav) | 13.8 s | 4.24 |
-| `igbo` | Igbo | [igbo.wav](src/africa_female_vc/voices/igbo.wav) | 9.3 s | 4.13 |
-| `kinyarwanda` | Kinyarwanda | [kinyarwanda.wav](src/africa_female_vc/voices/kinyarwanda.wav) | 8.8 s | 4.11 |
-| `kirundi` | Kirundi | [kirundi.wav](src/africa_female_vc/voices/kirundi.wav) | 9.2 s | 4.08 |
-| `ndebele` | Ndebele | [ndebele.wav](src/africa_female_vc/voices/ndebele.wav) | 8.1 s | 4.04 |
-| `oromo` | Oromo | [oromo.wav](src/africa_female_vc/voices/oromo.wav) | 8.2 s | 3.84 |
-| `sepedi` | Sepedi | [sepedi.wav](src/africa_female_vc/voices/sepedi.wav) | 8.3 s | 3.93 |
-| `sesotho` | Sesotho | [sesotho.wav](src/africa_female_vc/voices/sesotho.wav) | 9.0 s | 3.89 |
-| `setswana` | Setswana | [setswana.wav](src/africa_female_vc/voices/setswana.wav) | 10.0 s | 3.83 |
-| `shona` | Shona | [shona.wav](src/africa_female_vc/voices/shona.wav) | 10.3 s | 4.23 |
-| `swahili` | Swahili | [swahili.wav](src/africa_female_vc/voices/swahili.wav) | 8.8 s | 4.28 |
-| `swati` | Swati | [swati.wav](src/africa_female_vc/voices/swati.wav) | 9.2 s | 3.99 |
-| `tigrinya` | Tigrinya | [tigrinya.wav](src/africa_female_vc/voices/tigrinya.wav) | 9.5 s | 3.37 |
-| `tsonga` | Tsonga | [tsonga.wav](src/africa_female_vc/voices/tsonga.wav) | 8.4 s | 4.02 |
-| `twi` | Twi | [twi.wav](src/africa_female_vc/voices/twi.wav) | 11.3 s | 4.36 |
-| `venda` | Venda | [venda.wav](src/africa_female_vc/voices/venda.wav) | 11.4 s | 4.21 |
-| `xhosa` | Xhosa | [xhosa.wav](src/africa_female_vc/voices/xhosa.wav) | 13.5 s | 4.25 |
-| `yoruba` | Yoruba | [yoruba.wav](src/africa_female_vc/voices/yoruba.wav) | 9.7 s | 4.23 |
-| `zulu` | Zulu | [zulu.wav](src/africa_female_vc/voices/zulu.wav) | 8.9 s | 4.13 |
+The 21 built-in voices are real speakers from the training data (one drawn from each language's portion, so the
+set spans the whole dataset). They are named by how they sound - timbre, pitch, pace and intonation, measured
+relative to each other - and ship with the package in
+[`src/africa_female_vc/voices/`](src/africa_female_vc/voices). The language each was recorded in also works as
+an alias (`--voice swahili` = `--voice clear-mid-steady`).
 
-Each was picked as the highest-UTMOS 8-15 s clip of its language (among clips
-Demucs barely had to clean). Any other clip works as a voice too: pass `--reference`.
+| Voice (`--voice`) | Sounds like | Recorded in | Preview |
+|---|---|---|---|
+| `bright-high` | bright timbre, high pitch (~220 Hz), steady pace, lively intonation | Yoruba | [bright-high.wav](src/africa_female_vc/voices/bright-high.wav) |
+| `bright-high-calm` | bright timbre, high pitch (~243 Hz), quick pace, calm intonation | Oromo | [bright-high-calm.wav](src/africa_female_vc/voices/bright-high-calm.wav) |
+| `bright-high-quick` | bright timbre, high pitch (~228 Hz), quick pace, calm intonation | Kinyarwanda | [bright-high-quick.wav](src/africa_female_vc/voices/bright-high-quick.wav) |
+| `bright-low` | bright timbre, low pitch (~191 Hz), steady pace, calm intonation | Sesotho | [bright-low.wav](src/africa_female_vc/voices/bright-low.wav) |
+| `bright-low-steady` | bright timbre, low pitch (~196 Hz), steady pace, calm intonation | Shona | [bright-low-steady.wav](src/africa_female_vc/voices/bright-low-steady.wav) |
+| `bright-mid` | bright timbre, mid pitch (~207 Hz), slow pace, lively intonation | Swati | [bright-mid.wav](src/africa_female_vc/voices/bright-mid.wav) |
+| `bright-mid-quick` | bright timbre, mid pitch (~215 Hz), quick pace, lively intonation | Zulu | [bright-mid-quick.wav](src/africa_female_vc/voices/bright-mid-quick.wav) |
+| `clear-high` | clear timbre, high pitch (~230 Hz), slow pace, lively intonation | Tsonga | [clear-high.wav](src/africa_female_vc/voices/clear-high.wav) |
+| `clear-high-slow` | clear timbre, high pitch (~261 Hz), slow pace, lively intonation | Twi | [clear-high-slow.wav](src/africa_female_vc/voices/clear-high-slow.wav) |
+| `clear-low` | clear timbre, low pitch (~192 Hz), quick pace, calm intonation | Chichewa | [clear-low.wav](src/africa_female_vc/voices/clear-low.wav) |
+| `clear-mid` | clear timbre, mid pitch (~203 Hz), slow pace, calm intonation | Kirundi | [clear-mid.wav](src/africa_female_vc/voices/clear-mid.wav) |
+| `clear-mid-quick` | clear timbre, mid pitch (~210 Hz), quick pace, calm intonation | Ndebele | [clear-mid-quick.wav](src/africa_female_vc/voices/clear-mid-quick.wav) |
+| `clear-mid-slow` | clear timbre, mid pitch (~204 Hz), slow pace, lively intonation | Xhosa | [clear-mid-slow.wav](src/africa_female_vc/voices/clear-mid-slow.wav) |
+| `clear-mid-steady` | clear timbre, mid pitch (~209 Hz), steady pace, calm intonation | Swahili | [clear-mid-steady.wav](src/africa_female_vc/voices/clear-mid-steady.wav) |
+| `warm-high` | warm timbre, high pitch (~217 Hz), quick pace, lively intonation | Hausa | [warm-high.wav](src/africa_female_vc/voices/warm-high.wav) |
+| `warm-high-steady` | warm timbre, high pitch (~222 Hz), steady pace, calm intonation | Venda | [warm-high-steady.wav](src/africa_female_vc/voices/warm-high-steady.wav) |
+| `warm-low` | warm timbre, low pitch (~167 Hz), slow pace, calm intonation | Tigrinya | [warm-low.wav](src/africa_female_vc/voices/warm-low.wav) |
+| `warm-low-lively` | warm timbre, low pitch (~194 Hz), steady pace, lively intonation | Igbo | [warm-low-lively.wav](src/africa_female_vc/voices/warm-low-lively.wav) |
+| `warm-low-quick` | warm timbre, low pitch (~197 Hz), quick pace, lively intonation | Setswana | [warm-low-quick.wav](src/africa_female_vc/voices/warm-low-quick.wav) |
+| `warm-low-steady` | warm timbre, low pitch (~187 Hz), steady pace, lively intonation | Sepedi | [warm-low-steady.wav](src/africa_female_vc/voices/warm-low-steady.wav) |
+| `warm-mid` | warm timbre, mid pitch (~209 Hz), slow pace, lively intonation | Amharic | [warm-mid.wav](src/africa_female_vc/voices/warm-mid.wav) |
+
+Any other clip works as a voice too: pass `--reference`.
 
 ## Install
 
@@ -58,17 +64,17 @@ pull the torch stack it expects. A GPU is strongly recommended (~6 GB VRAM).
 
 ```bash
 africa-female-vc voices                                         # list the voices
-africa-female-vc convert-file talk.wav --voice swahili -o talk_swahili.wav
-africa-female-vc convert-local recordings/ -o converted/ --voice yoruba
+africa-female-vc convert-file talk.wav --voice warm-low -o talk_warm_low.wav
+africa-female-vc convert-local recordings/ -o converted/ --voice bright-high
 africa-female-vc convert-file talk.wav --reference my_voice.wav -o out.wav   # any reference clip
 ```
 
 ```python
 from africa_female_vc import VoiceConverter
 
-vc = VoiceConverter(voice="twi")          # loads once, converts many
+vc = VoiceConverter(voice="clear-high-slow")   # loads once, converts many
 wav, sr = vc.convert_file("talk.wav")
-wav, sr = vc.convert_file("talk.wav", voice="zulu")
+wav, sr = vc.convert_file("talk.wav", voice="warm-low")
 ```
 
 `--diffusion-steps 50` is the default (25 is faster but robotic, 100 slightly smoother).

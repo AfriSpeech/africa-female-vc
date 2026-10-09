@@ -35,10 +35,11 @@
   section { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px; margin-bottom: 16px; }
   h2 { font-size: 1.05rem; margin: 0 0 12px; }
   .step { color: var(--accent); font-weight: 700; margin-right: 6px; }
-  .voices { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+  .voices { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; }
   .voice { border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; display: flex; align-items: center; justify-content: space-between; gap: 6px; cursor: pointer; background: var(--card); color: var(--ink); font: inherit; text-align: left; }
   .voice.sel { border-color: var(--accent); background: var(--sel); }
-  .voice .name { font-weight: 600; }
+  .voice .name { font-weight: 600; display: block; }
+  .voice .meta { color: var(--muted); font-size: .8rem; display: block; line-height: 1.3; }
   .play { border: 0; background: none; color: var(--accent); cursor: pointer; font-size: 1rem; padding: 2px 4px; }
   .row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
   button.primary, button.ghost, label.ghost { border-radius: 10px; padding: 10px 16px; font: inherit; font-weight: 600; cursor: pointer; }
@@ -55,7 +56,7 @@
 <body>
 <main>
   <h1>Africa Female VC</h1>
-  <p class="sub">Convert any speech into one of 21 African female voices. Seed-VC fine-tuned on
+  <p class="sub">Convert speech in any language into one of 21 African female voices. Seed-VC fine-tuned on
     <a href="https://huggingface.co/datasets/AfriSpeech/africa-female-speech-v2-best60" target="_blank" rel="noopener">AfriSpeech/africa-female-speech-v2-best60</a>.
     Model: <a href="https://huggingface.co/AfriSpeech/africa-female-vc" target="_blank" rel="noopener">AfriSpeech/africa-female-vc</a> ·
     Code: <a href="https://github.com/AfriSpeech/africa-female-vc" target="_blank" rel="noopener">GitHub</a></p>
@@ -65,7 +66,7 @@
   <section>
     <h2><span class="step">1</span>Pick a voice</h2>
     <div id="voices" class="voices"></div>
-    <p class="hint">Press ▶ to preview a voice. Each is a real speaker of that language.</p>
+    <p class="hint">Press ▶ to preview a voice. Voices are not tied to languages - any voice works with speech in any language. Each is a real speaker from the training data; "recorded in" is just where she came from.</p>
   </section>
 
   <section>
@@ -101,7 +102,7 @@ const statusEl = document.getElementById("status");
 const statusText = document.getElementById("statusText");
 let serverReady = false;
 let srcBlob = null;
-let voice = "twi";
+let voice = "clear-high-slow";
 
 function setStatus(kind, text) {
   statusEl.className = "status " + kind;
@@ -138,16 +139,17 @@ async function loadVoices() {
   const voices = await (await fetch("voices/voices.json")).json();
   const grid = document.getElementById("voices");
   const preview = new Audio();
-  Object.entries(voices).sort((a, b) => a[1].language.localeCompare(b[1].language)).forEach(([id, meta]) => {
+  Object.entries(voices).sort((a, b) => a[0].localeCompare(b[0])).forEach(([id, meta]) => {
     const card = document.createElement("div");
     card.className = "voice" + (id === voice ? " sel" : "");
     card.setAttribute("role", "button");
     card.tabIndex = 0;
-    card.innerHTML = `<span class="name">${meta.language}</span>`;
+    card.innerHTML = `<span><span class="name">${id}</span><span class="meta">~${meta.pitch_hz} Hz · recorded in ${meta.recorded_in}</span></span>`;
+    card.title = meta.description;
     const play = document.createElement("button");
     play.className = "play";
     play.type = "button";
-    play.title = "Preview " + meta.language;
+    play.title = "Preview " + id;
     play.textContent = "▶";
     play.onclick = (ev) => { ev.stopPropagation(); preview.src = "voices/" + meta.file; preview.play(); };
     card.appendChild(play);

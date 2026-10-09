@@ -67,11 +67,19 @@ def main(argv: list[str] | None = None) -> int:
         from .voices import list_voices
 
         for vid, meta in sorted(list_voices().items()):
-            print(f"{vid:12s} {meta['language']:12s} {meta['duration']:5.1f}s  UTMOS {meta['utmos']:.2f}")
+            print(f"{vid:20s} {meta['description']:62s} (recorded in {meta['recorded_in']})")
         return 0
 
     import soundfile as sf
 
+    if not args.reference:
+        from .voices import resolve_voice
+
+        try:
+            args.voice = resolve_voice(args.voice)
+        except KeyError as exc:
+            print(f"error: {exc.args[0]}", file=sys.stderr)
+            return 2
     conv = _converter(args)
     if args.command == "convert-file":
         wav, sr = conv.convert_file(args.source, voice=args.voice, reference=args.reference)

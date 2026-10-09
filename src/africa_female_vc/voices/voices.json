@@ -1,212 +1,338 @@
 {
- "amharic": {
-  "language": "Amharic",
-  "config": "amharic_amh",
-  "file": "amharic.wav",
-  "source_id": "amharic_amh_01_01183",
-  "utmos": 3.776,
-  "duration": 8.3,
-  "transcript": "እውነትን ስማርትን ቅን ከሆኑ ከልብ ከሚወዱኝና ደስ ከሚሉ ሰዎች ጋር ተገናኘሁ ከዚያ እኔ የምመለወጥ ጀመርኩ",
-  "candidate": 1
- },
- "chichewa": {
-  "language": "Chichewa",
-  "config": "chichewa_nya",
-  "file": "chichewa.wav",
-  "source_id": "chichewa_nya_02_00374",
-  "utmos": 4.097,
-  "duration": 9.3,
-  "transcript": "ndinali ndi nkhawa kwambiri koma mamuna wanga sankada nazo nkhawa kwambiri ngati ine iye ananditsimikizira komanso undiuza kuti ndiyenera kudalira yehova",
-  "candidate": 2
- },
- "hausa": {
-  "language": "Hausa",
-  "config": "hausa_hau",
-  "file": "hausa.wav",
-  "source_id": "hausa_hau_01_01857",
-  "utmos": 4.239,
-  "duration": 13.8,
-  "transcript": "ni ma misali mai kyau da iyayena suka kafa ne ya taimaka min mahaifiya ta tayi baptist matan ina karama bayan yan shekaru mahaifina ma yayi baftisma kuma tun daga lokacin bama wasa da dangantakar mu da jahoba",
-  "candidate": 2
- },
- "igbo": {
-  "language": "Igbo",
-  "config": "igbo_ibo",
-  "file": "igbo.wav",
-  "source_id": "igbo_ibo_01_00381",
-  "utmos": 4.126,
-  "duration": 9.3,
-  "transcript": "1 ihe kwuru na baịbụl ogologo oge gara aga ga-enyere anyị aka ọ sịrị na-emesokwanu ndi mmadu otunu choro ka ha na-emeso ọnụ",
-  "candidate": 1
- },
- "kinyarwanda": {
-  "language": "Kinyarwanda",
-  "config": "kinyarwanda_kin",
-  "file": "kinyarwanda.wav",
-  "source_id": "kinyarwanda_kin_00_00739",
-  "utmos": 4.108,
-  "duration": 8.8,
-  "transcript": "kandi na we akabasha kumbona neza ubwo rero twabonye ahantu nazajya mpagarara maze denise ambwira igihe gikwiriye najya amazira",
-  "candidate": 2
- },
- "ndebele": {
-  "language": "Ndebele",
-  "config": "ndebele_south_nde",
-  "file": "ndebele.wav",
-  "source_id": "ndebele_south_nde_02_00873",
-  "utmos": 4.043,
-  "duration": 8.1,
-  "transcript": "wakhuthaza woke umuntu kanye nathi esasanda kutjhatha mina lomkami sacabanga ngakho sasesibhalela egatsheni",
-  "candidate": 2
- },
- "oromo": {
-  "language": "Oromo",
-  "config": "oromo_orm",
-  "file": "oromo.wav",
-  "source_id": "oromo_orm_02_02020",
-  "utmos": 3.844,
-  "duration": 8.2,
-  "transcript": "gaaffilee achirra jiran umurii isaa guutuu gaafachaa akka ture nutti hime kanaafuu maayikii wajjin deebinee isaas ofsiisuuf beellama qaban",
-  "candidate": 3
- },
- "kirundi": {
-  "language": "Kirundi",
-  "config": "rundi_run",
-  "file": "kirundi.wav",
-  "source_id": "rundi_run_01_00632",
-  "utmos": 4.075,
-  "duration": 9.2,
-  "transcript": "kuko imyaka yagiye irahera jewe numukobwa wanje twagiye turakoreshwa",
-  "candidate": 3
- },
- "sepedi": {
-  "language": "Sepedi",
-  "config": "sepedi_nso",
-  "file": "sepedi.wav",
-  "source_id": "sepedi_nso_01_02328",
-  "utmos": 3.93,
-  "duration": 8.3,
-  "transcript": "go be go bolawa batho ba bantshi mo nageng so batswadi ba ka le butiaka le bona ba ile ba bolawa",
-  "candidate": 1
- },
- "sesotho": {
-  "language": "Sesotho",
-  "config": "sesotho_sot",
-  "file": "sesotho.wav",
-  "source_id": "sesotho_sot_00_00315",
-  "utmos": 3.894,
-  "duration": 9.0,
-  "transcript": "ka dinako tse ding ke ne ke sa bone le monyako o notletsoeng ke ne ke iponela sepakapaka fela ke sa bone dibatla tseo",
-  "candidate": 3
- },
- "shona": {
-  "language": "Shona",
-  "config": "shona_sna",
-  "file": "shona.wav",
-  "source_id": "shona_sna_01_02084",
-  "utmos": 4.227,
-  "duration": 10.3,
-  "transcript": "ehe kakabuda video yekutanga yeve chidiki vanobvunza kuti inonzi how can i make real friends vakandikoka tikariona tese",
-  "candidate": 3
- },
- "swahili": {
-  "language": "Swahili",
-  "config": "swahili_swa",
-  "file": "swahili.wav",
-  "source_id": "swahili_swa_01_00150",
-  "utmos": 4.278,
-  "duration": 8.8,
-  "transcript": "na ninaposubiri hasubiri tu bila kufanya chochote yehova anafanya kazi kwa bidii siku zote ana mambo ya kufanya",
-  "candidate": 1
- },
- "swati": {
-  "language": "Swati",
-  "config": "swati_ssw",
-  "file": "swati.wav",
-  "source_id": "swati_ssw_00_00030",
-  "utmos": 3.986,
-  "duration": 9.2,
-  "transcript": "ngathi ku jobe wathi kuphi ngathi ku jobe laphinde latsi kuphi ummeli wami wathi ngujobe",
-  "candidate": 3
- },
- "tigrinya": {
-  "language": "Tigrinya",
-  "config": "tigrinya_tir",
-  "file": "tigrinya.wav",
-  "source_id": "tigrinya_tir_00_00024",
-  "utmos": 3.365,
-  "duration": 9.5,
-  "transcript": "ንመርመራ ክንከይድ ከለና ነቶም መርመርትና ብጠባይናን ብዘረባናን ብለው ትናን ኣቢልና ጥሩፋት ከምዘይኮና ከነርእዮም ንጽዕር ኔርና",
-  "candidate": 3
- },
- "tsonga": {
-  "language": "Tsonga",
-  "config": "tsonga_tso",
-  "file": "tsonga.wav",
-  "source_id": "tsonga_tso_01_00918",
-  "utmos": 4.023,
-  "duration": 8.4,
-  "transcript": "ivi ni tlile ka link yo sungula nie mahala unga dyondza bibele mahala",
-  "candidate": 2
- },
- "setswana": {
-  "language": "Setswana",
-  "config": "tswana_tsn",
-  "file": "setswana.wav",
-  "source_id": "tswana_tsn_02_00234",
-  "utmos": 3.835,
-  "duration": 10.0,
-  "transcript": "bodiredi bo ne bo nthusa ka gonne ke ne ke bua le batho ba tsholofelo e e kgatlhang e re nang le yone fa ke ntse ke thusa ba bangwe le nna tumelo yame e ne e nonofa",
-  "candidate": 2
- },
- "twi": {
-  "language": "Twi",
-  "config": "twi_twi",
-  "file": "twi.wav",
-  "source_id": "twi_twi_03_01373",
-  "utmos": 4.356,
-  "duration": 11.3,
-  "transcript": "ɛhɔ ka sɛ na ateasefoɔ nim sɛ ɔbɛwuwu awufoɔ deɛ wɔnnim biribiara na wɔnni akatua biara bio ɛfiri sɛ nnipa nkae wɔn bio",
-  "candidate": 1
- },
- "venda": {
-  "language": "Venda",
-  "config": "venda_ven",
-  "file": "venda.wav",
-  "source_id": "venda_ven_02_00277",
-  "utmos": 4.213,
-  "duration": 11.4,
-  "transcript": "ndo aluswa nga mme a nga mahayani musi ndi sha mutuku mmeya nga vho ngudisa u vhala na u nwala vho vha tshi shumisa khandiso fhambanaho",
-  "candidate": 1
- },
- "xhosa": {
-  "language": "Xhosa",
-  "config": "xhosa_xho",
-  "file": "xhosa.wav",
-  "source_id": "xhosa_xho_00_00034",
-  "utmos": 4.249,
-  "duration": 13.5,
-  "transcript": "ndasuka ndathi ebhayibhileni yathi yona kakade isebhayibhileni kodwa ndawoni ndathi kuyobhi yathi p ndathi kuyobhi yaphinda yabuza",
-  "candidate": 1
- },
- "yoruba": {
-  "language": "Yoruba",
-  "config": "yoruba_yor",
-  "file": "yoruba.wav",
-  "source_id": "yoruba_yor_01_01971",
+ "bright-high": {
+  "file": "bright-high.wav",
+  "description": "bright timbre, high pitch (~220 Hz), steady pace, lively intonation",
+  "recorded_in": "Yoruba",
+  "aliases": [
+   "yoruba",
+   "yoruba",
+   "yoruba_yor"
+  ],
+  "pitch_hz": 220,
   "utmos": 4.226,
   "duration": 9.7,
   "transcript": "ka ni mii kii ṣe iyawo ọkan lara awọn igbimọ ẹka ni o ṣeeṣe kin ma mu ba awọn arakunrin yen se gbaraleji ofa to fun itọsọna e",
-  "candidate": 3
+  "source_id": "yoruba_yor_01_01971",
+  "source_dataset": "AfriSpeech/africa-female-speech-v2-best60"
  },
- "zulu": {
-  "language": "Zulu",
-  "config": "zulu_zul",
-  "file": "zulu.wav",
-  "source_id": "zulu_zul_02_01512",
+ "bright-high-calm": {
+  "file": "bright-high-calm.wav",
+  "description": "bright timbre, high pitch (~243 Hz), quick pace, calm intonation",
+  "recorded_in": "Oromo",
+  "aliases": [
+   "oromo",
+   "oromo",
+   "oromo_orm"
+  ],
+  "pitch_hz": 243,
+  "utmos": 3.844,
+  "duration": 8.2,
+  "transcript": "gaaffilee achirra jiran umurii isaa guutuu gaafachaa akka ture nutti hime kanaafuu maayikii wajjin deebinee isaas ofsiisuuf beellama qaban",
+  "source_id": "oromo_orm_02_02020",
+  "source_dataset": "AfriSpeech/africa-female-speech-v2-best60"
+ },
+ "bright-high-quick": {
+  "file": "bright-high-quick.wav",
+  "description": "bright timbre, high pitch (~228 Hz), quick pace, calm intonation",
+  "recorded_in": "Kinyarwanda",
+  "aliases": [
+   "kinyarwanda",
+   "kinyarwanda",
+   "kinyarwanda_kin"
+  ],
+  "pitch_hz": 228,
+  "utmos": 4.108,
+  "duration": 8.8,
+  "transcript": "kandi na we akabasha kumbona neza ubwo rero twabonye ahantu nazajya mpagarara maze denise ambwira igihe gikwiriye najya amazira",
+  "source_id": "kinyarwanda_kin_00_00739",
+  "source_dataset": "AfriSpeech/africa-female-speech-v2-best60"
+ },
+ "bright-low": {
+  "file": "bright-low.wav",
+  "description": "bright timbre, low pitch (~191 Hz), steady pace, calm intonation",
+  "recorded_in": "Sesotho",
+  "aliases": [
+   "sesotho",
+   "sesotho",
+   "sesotho_sot"
+  ],
+  "pitch_hz": 191,
+  "utmos": 3.894,
+  "duration": 9.0,
+  "transcript": "ka dinako tse ding ke ne ke sa bone le monyako o notletsoeng ke ne ke iponela sepakapaka fela ke sa bone dibatla tseo",
+  "source_id": "sesotho_sot_00_00315",
+  "source_dataset": "AfriSpeech/africa-female-speech-v2-best60"
+ },
+ "bright-low-steady": {
+  "file": "bright-low-steady.wav",
+  "description": "bright timbre, low pitch (~196 Hz), steady pace, calm intonation",
+  "recorded_in": "Shona",
+  "aliases": [
+   "shona",
+   "shona",
+   "shona_sna"
+  ],
+  "pitch_hz": 196,
+  "utmos": 4.227,
+  "duration": 10.3,
+  "transcript": "ehe kakabuda video yekutanga yeve chidiki vanobvunza kuti inonzi how can i make real friends vakandikoka tikariona tese",
+  "source_id": "shona_sna_01_02084",
+  "source_dataset": "AfriSpeech/africa-female-speech-v2-best60"
+ },
+ "bright-mid": {
+  "file": "bright-mid.wav",
+  "description": "bright timbre, mid pitch (~207 Hz), slow pace, lively intonation",
+  "recorded_in": "Swati",
+  "aliases": [
+   "swati",
+   "swati",
+   "swati_ssw"
+  ],
+  "pitch_hz": 207,
+  "utmos": 3.986,
+  "duration": 9.2,
+  "transcript": "ngathi ku jobe wathi kuphi ngathi ku jobe laphinde latsi kuphi ummeli wami wathi ngujobe",
+  "source_id": "swati_ssw_00_00030",
+  "source_dataset": "AfriSpeech/africa-female-speech-v2-best60"
+ },
+ "bright-mid-quick": {
+  "file": "bright-mid-quick.wav",
+  "description": "bright timbre, mid pitch (~215 Hz), quick pace, lively intonation",
+  "recorded_in": "Zulu",
+  "aliases": [
+   "zulu",
+   "zulu",
+   "zulu_zul"
+  ],
+  "pitch_hz": 215,
   "utmos": 4.126,
   "duration": 8.9,
   "transcript": "yazi ngikhumbulani ngesikhathi ngiwumemezelo ongabhapathiziwe sesishumayela ndawonye sesisanda kuyiqala nje insimu ngalelo langa",
-  "candidate": 2
+  "source_id": "zulu_zul_02_01512",
+  "source_dataset": "AfriSpeech/africa-female-speech-v2-best60"
+ },
+ "clear-high": {
+  "file": "clear-high.wav",
+  "description": "clear timbre, high pitch (~230 Hz), slow pace, lively intonation",
+  "recorded_in": "Tsonga",
+  "aliases": [
+   "tsonga",
+   "tsonga",
+   "tsonga_tso"
+  ],
+  "pitch_hz": 230,
+  "utmos": 4.023,
+  "duration": 8.4,
+  "transcript": "ivi ni tlile ka link yo sungula nie mahala unga dyondza bibele mahala",
+  "source_id": "tsonga_tso_01_00918",
+  "source_dataset": "AfriSpeech/africa-female-speech-v2-best60"
+ },
+ "clear-high-slow": {
+  "file": "clear-high-slow.wav",
+  "description": "clear timbre, high pitch (~261 Hz), slow pace, lively intonation",
+  "recorded_in": "Twi",
+  "aliases": [
+   "twi",
+   "twi",
+   "twi_twi"
+  ],
+  "pitch_hz": 261,
+  "utmos": 4.356,
+  "duration": 11.3,
+  "transcript": "ɛhɔ ka sɛ na ateasefoɔ nim sɛ ɔbɛwuwu awufoɔ deɛ wɔnnim biribiara na wɔnni akatua biara bio ɛfiri sɛ nnipa nkae wɔn bio",
+  "source_id": "twi_twi_03_01373",
+  "source_dataset": "AfriSpeech/africa-female-speech-v2-best60"
+ },
+ "clear-low": {
+  "file": "clear-low.wav",
+  "description": "clear timbre, low pitch (~192 Hz), quick pace, calm intonation",
+  "recorded_in": "Chichewa",
+  "aliases": [
+   "chichewa",
+   "chichewa",
+   "chichewa_nya"
+  ],
+  "pitch_hz": 192,
+  "utmos": 4.097,
+  "duration": 9.3,
+  "transcript": "ndinali ndi nkhawa kwambiri koma mamuna wanga sankada nazo nkhawa kwambiri ngati ine iye ananditsimikizira komanso undiuza kuti ndiyenera kudalira yehova",
+  "source_id": "chichewa_nya_02_00374",
+  "source_dataset": "AfriSpeech/africa-female-speech-v2-best60"
+ },
+ "clear-mid": {
+  "file": "clear-mid.wav",
+  "description": "clear timbre, mid pitch (~203 Hz), slow pace, calm intonation",
+  "recorded_in": "Kirundi",
+  "aliases": [
+   "kirundi",
+   "kirundi",
+   "rundi_run"
+  ],
+  "pitch_hz": 203,
+  "utmos": 4.075,
+  "duration": 9.2,
+  "transcript": "kuko imyaka yagiye irahera jewe numukobwa wanje twagiye turakoreshwa",
+  "source_id": "rundi_run_01_00632",
+  "source_dataset": "AfriSpeech/africa-female-speech-v2-best60"
+ },
+ "clear-mid-quick": {
+  "file": "clear-mid-quick.wav",
+  "description": "clear timbre, mid pitch (~210 Hz), quick pace, calm intonation",
+  "recorded_in": "Ndebele",
+  "aliases": [
+   "ndebele",
+   "ndebele",
+   "ndebele_south_nde"
+  ],
+  "pitch_hz": 210,
+  "utmos": 4.043,
+  "duration": 8.1,
+  "transcript": "wakhuthaza woke umuntu kanye nathi esasanda kutjhatha mina lomkami sacabanga ngakho sasesibhalela egatsheni",
+  "source_id": "ndebele_south_nde_02_00873",
+  "source_dataset": "AfriSpeech/africa-female-speech-v2-best60"
+ },
+ "clear-mid-slow": {
+  "file": "clear-mid-slow.wav",
+  "description": "clear timbre, mid pitch (~204 Hz), slow pace, lively intonation",
+  "recorded_in": "Xhosa",
+  "aliases": [
+   "xhosa",
+   "xhosa",
+   "xhosa_xho"
+  ],
+  "pitch_hz": 204,
+  "utmos": 4.249,
+  "duration": 13.5,
+  "transcript": "ndasuka ndathi ebhayibhileni yathi yona kakade isebhayibhileni kodwa ndawoni ndathi kuyobhi yathi p ndathi kuyobhi yaphinda yabuza",
+  "source_id": "xhosa_xho_00_00034",
+  "source_dataset": "AfriSpeech/africa-female-speech-v2-best60"
+ },
+ "clear-mid-steady": {
+  "file": "clear-mid-steady.wav",
+  "description": "clear timbre, mid pitch (~209 Hz), steady pace, calm intonation",
+  "recorded_in": "Swahili",
+  "aliases": [
+   "swahili",
+   "swahili",
+   "swahili_swa"
+  ],
+  "pitch_hz": 209,
+  "utmos": 4.278,
+  "duration": 8.8,
+  "transcript": "na ninaposubiri hasubiri tu bila kufanya chochote yehova anafanya kazi kwa bidii siku zote ana mambo ya kufanya",
+  "source_id": "swahili_swa_01_00150",
+  "source_dataset": "AfriSpeech/africa-female-speech-v2-best60"
+ },
+ "warm-high": {
+  "file": "warm-high.wav",
+  "description": "warm timbre, high pitch (~217 Hz), quick pace, lively intonation",
+  "recorded_in": "Hausa",
+  "aliases": [
+   "hausa",
+   "hausa",
+   "hausa_hau"
+  ],
+  "pitch_hz": 217,
+  "utmos": 4.239,
+  "duration": 13.8,
+  "transcript": "ni ma misali mai kyau da iyayena suka kafa ne ya taimaka min mahaifiya ta tayi baptist matan ina karama bayan yan shekaru mahaifina ma yayi baftisma kuma tun daga lokacin bama wasa da dangantakar mu da jahoba",
+  "source_id": "hausa_hau_01_01857",
+  "source_dataset": "AfriSpeech/africa-female-speech-v2-best60"
+ },
+ "warm-high-steady": {
+  "file": "warm-high-steady.wav",
+  "description": "warm timbre, high pitch (~222 Hz), steady pace, calm intonation",
+  "recorded_in": "Venda",
+  "aliases": [
+   "venda",
+   "venda",
+   "venda_ven"
+  ],
+  "pitch_hz": 222,
+  "utmos": 4.213,
+  "duration": 11.4,
+  "transcript": "ndo aluswa nga mme a nga mahayani musi ndi sha mutuku mmeya nga vho ngudisa u vhala na u nwala vho vha tshi shumisa khandiso fhambanaho",
+  "source_id": "venda_ven_02_00277",
+  "source_dataset": "AfriSpeech/africa-female-speech-v2-best60"
+ },
+ "warm-low": {
+  "file": "warm-low.wav",
+  "description": "warm timbre, low pitch (~167 Hz), slow pace, calm intonation",
+  "recorded_in": "Tigrinya",
+  "aliases": [
+   "tigrinya",
+   "tigrinya",
+   "tigrinya_tir"
+  ],
+  "pitch_hz": 167,
+  "utmos": 3.365,
+  "duration": 9.5,
+  "transcript": "ንመርመራ ክንከይድ ከለና ነቶም መርመርትና ብጠባይናን ብዘረባናን ብለው ትናን ኣቢልና ጥሩፋት ከምዘይኮና ከነርእዮም ንጽዕር ኔርና",
+  "source_id": "tigrinya_tir_00_00024",
+  "source_dataset": "AfriSpeech/africa-female-speech-v2-best60"
+ },
+ "warm-low-lively": {
+  "file": "warm-low-lively.wav",
+  "description": "warm timbre, low pitch (~194 Hz), steady pace, lively intonation",
+  "recorded_in": "Igbo",
+  "aliases": [
+   "igbo",
+   "igbo",
+   "igbo_ibo"
+  ],
+  "pitch_hz": 194,
+  "utmos": 4.126,
+  "duration": 9.3,
+  "transcript": "1 ihe kwuru na baịbụl ogologo oge gara aga ga-enyere anyị aka ọ sịrị na-emesokwanu ndi mmadu otunu choro ka ha na-emeso ọnụ",
+  "source_id": "igbo_ibo_01_00381",
+  "source_dataset": "AfriSpeech/africa-female-speech-v2-best60"
+ },
+ "warm-low-quick": {
+  "file": "warm-low-quick.wav",
+  "description": "warm timbre, low pitch (~197 Hz), quick pace, lively intonation",
+  "recorded_in": "Setswana",
+  "aliases": [
+   "setswana",
+   "setswana",
+   "tswana_tsn"
+  ],
+  "pitch_hz": 197,
+  "utmos": 3.835,
+  "duration": 10.0,
+  "transcript": "bodiredi bo ne bo nthusa ka gonne ke ne ke bua le batho ba tsholofelo e e kgatlhang e re nang le yone fa ke ntse ke thusa ba bangwe le nna tumelo yame e ne e nonofa",
+  "source_id": "tswana_tsn_02_00234",
+  "source_dataset": "AfriSpeech/africa-female-speech-v2-best60"
+ },
+ "warm-low-steady": {
+  "file": "warm-low-steady.wav",
+  "description": "warm timbre, low pitch (~187 Hz), steady pace, lively intonation",
+  "recorded_in": "Sepedi",
+  "aliases": [
+   "sepedi",
+   "sepedi",
+   "sepedi_nso"
+  ],
+  "pitch_hz": 187,
+  "utmos": 3.93,
+  "duration": 8.3,
+  "transcript": "go be go bolawa batho ba bantshi mo nageng so batswadi ba ka le butiaka le bona ba ile ba bolawa",
+  "source_id": "sepedi_nso_01_02328",
+  "source_dataset": "AfriSpeech/africa-female-speech-v2-best60"
+ },
+ "warm-mid": {
+  "file": "warm-mid.wav",
+  "description": "warm timbre, mid pitch (~209 Hz), slow pace, lively intonation",
+  "recorded_in": "Amharic",
+  "aliases": [
+   "amharic",
+   "amharic",
+   "amharic_amh"
+  ],
+  "pitch_hz": 209,
+  "utmos": 3.776,
+  "duration": 8.3,
+  "transcript": "እውነትን ስማርትን ቅን ከሆኑ ከልብ ከሚወዱኝና ደስ ከሚሉ ሰዎች ጋር ተገናኘሁ ከዚያ እኔ የምመለወጥ ጀመርኩ",
+  "source_id": "amharic_amh_01_01183",
+  "source_dataset": "AfriSpeech/africa-female-speech-v2-best60"
  }
 }
