@@ -7,6 +7,10 @@ Built on [Seed-VC](https://github.com/Plachtaa/seed-vc), fine-tuned on
 [AfriSpeech/africa-female-speech-v2-best60](https://huggingface.co/datasets/AfriSpeech/africa-female-speech-v2-best60)
 (the cleanest hour of each language: Demucs-cleaned, UTMOS-ranked).
 
+It is **not limited to those 21 languages**: voice conversion is audio-to-audio, so the words come from the
+input speech and the voice from a reference clip - there is no text or language input to restrict it. The
+21 training languages are where quality has been measured; other languages work too.
+
 - **Model:** [AfriSpeech/africa-female-vc](https://huggingface.co/AfriSpeech/africa-female-vc)
 - **Try it:** [AfriSpeech/africa-female-vc-demo](https://huggingface.co/spaces/AfriSpeech/africa-female-vc-demo)
 
