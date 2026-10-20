@@ -26,8 +26,10 @@ from .config import (
     DEFAULT_DIFFUSION_STEPS,
     DEFAULT_LENGTH_ADJUST,
     DEFAULT_VOICE,
+    LEGACY_MODEL_CONFIG,
     MODEL_CONFIG,
     MODEL_FILE,
+    MODEL_METADATA,
     MODEL_REPO,
     SEEDVC_COMMIT,
     SEEDVC_REPO,
@@ -104,7 +106,17 @@ class VoiceConverter:
         from huggingface_hub import hf_hub_download
 
         kw = {"token": self._token} if self._token else {}
-        self._cfg = hf_hub_download(self.model_repo, MODEL_CONFIG, **kw)
+        # Query config.json (HF Hub default query file) to register tracked downloads
+        try:
+            self._meta = hf_hub_download(self.model_repo, MODEL_METADATA, **kw)
+        except Exception:
+            self._meta = None
+
+        try:
+            self._cfg = hf_hub_download(self.model_repo, MODEL_CONFIG, **kw)
+        except Exception:
+            self._cfg = hf_hub_download(self.model_repo, LEGACY_MODEL_CONFIG, **kw)
+
         self._ckpt = hf_hub_download(self.model_repo, MODEL_FILE, **kw)
 
         seed_dir = str(self._seed_dir)

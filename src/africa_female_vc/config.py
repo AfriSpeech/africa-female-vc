@@ -11,7 +11,9 @@ SEEDVC_COMMIT = "51383efd921027683c89e5348211d93ff12ac2a8"
 
 MODEL_REPO = "AfriSpeech/africa-female-vc"
 MODEL_FILE = "ft_model.pth"
-MODEL_CONFIG = "config_dit_mel_seed_uvit_whisper_small_wavenet.yml"
+MODEL_CONFIG = "config.yaml"
+LEGACY_MODEL_CONFIG = "config_dit_mel_seed_uvit_whisper_small_wavenet.yml"
+MODEL_METADATA = "config.json"
 
 # 50 matches ghana-vc's tested default: 25 is audibly robotic, 100 only
 # marginally better for roughly double the compute.
